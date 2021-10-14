@@ -5,17 +5,26 @@
         <h1>Compra de Ingressos</h1>
 
         <form method="POST" th:object="${ingresso}">
-            <div class="mb-3">
+            <div class="input-group mb-3">
                 <!--suppress XmlInvalidId -->
                 <label class="form-label" for="valor_ingresso">Tipo Ingresso</label>
-                <!-- <input class="form-control" type="text" th:field="*{valor_ingresso}"> -->
-                <input class="form-control" type="radio" th:field="*{tipo_ingresso}" name="Inteira" value="Inteira">
+            </div>
+            <div>
                 <!--suppress XmlInvalidId -->
                 <label class="custom-control-label" for="tipo_ingresso">Inteira</label>
-                <input class="form-control" type="radio" th:field="*{tipo_ingresso}" name="Meia" value="Meia">
+            </div>
+            <div>
+                <input class="form-check-input mt-0" type="radio" th:field="*{tipo_ingresso}" name="Inteira" value="Inteira" aria-label="Radio button for following text input">
+            </div>
+
+            <div>
                 <!--suppress XmlInvalidId -->
                 <label class="custom-control-label" for="tipo_ingresso">Meia</label>
             </div>
+            <div>
+                <input class="form-check-input mt-0" type="radio" th:field="*{tipo_ingresso}" name="Meia" value="Meia" aria-label="Radio button for following text input">
+            </div>
+
 
             <div class="mb-3">
                 <!--suppress XmlInvalidId -->
