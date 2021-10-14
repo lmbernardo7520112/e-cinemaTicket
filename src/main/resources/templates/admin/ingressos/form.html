@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html th:replace="~{base :: template (~{::main})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+    <main>
+        <h1>Compra de Ingressos</h1>
+
+        <form method="POST" th:object="${ingresso}">
+            <div class="mb-3">
+                <!--suppress XmlInvalidId -->
+                <label class="form-label" for="valor_ingresso">Tipo Ingresso</label>
+                <!-- <input class="form-control" type="text" th:field="*{valor_ingresso}"> -->
+                <input class="form-control" type="radio" th:field="*{tipo_ingresso}" name="Inteira" value="Inteira">
+                <!--suppress XmlInvalidId -->
+                <label class="custom-control-label" for="tipo_ingresso">Inteira</label>
+                <input class="form-control" type="radio" th:field="*{tipo_ingresso}" name="Meia" value="Meia">
+                <!--suppress XmlInvalidId -->
+                <label class="custom-control-label" for="tipo_ingresso">Meia</label>
+            </div>
+
+            <div class="mb-3">
+                <!--suppress XmlInvalidId -->
+                <label class="form-label" for="quantidade">Quantidade</label>
+                <input class="form-control" type="text" th:field="*{quantidade}">
+            </div>
+
+
+            <button class="btn btn-success" type="submit">Salvar</button>
+        </form>
+    </main>
+
+</body>
+</html>
